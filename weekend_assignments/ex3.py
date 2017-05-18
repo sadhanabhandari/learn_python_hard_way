@@ -8,4 +8,4 @@ def max_length(first_string,second_string):
     else:
         print second_string
 
-max_length("appe","punj")
+max_length("hello darkness my old friend","punj")
