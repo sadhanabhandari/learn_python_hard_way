@@ -1,0 +1,104 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#Aboutme {background-color:red;}
+#Resume {background-color:green;}
+#Contact {background-color:blue;}
+#Resources {background-color:orange;}
+</style>
+
+
+</head>
+<body>
+<h1>Welcome to Sadhana's Blog </h1>
+
+<div id="Aboutme" class="tabcontent">
+  <h3>About me</h3>
+  <p>I'am Sadhana Bhandari. I am a recent graduate in Masters in Software Engineering. I am currently looking for opportunities in Bay area.
+  <p>
+  <img id="sadhna2" src="{% static 'sadhna2.jpg' %}"  width="304" height="228">
+
+
+    
+</p>
+
+  </p>
+</div>
+
+<div id="Resume" class="tabcontent">
+  <h3>Contact</h3>
+  <p>I will upload my resume soon</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3> Contact</h3>
+  <p>I can be reached at sadhna.bhandari1@gmail.com</p>
+</div>
+
+<div id="Resources" class="tabcontent">
+  <h3>Resources</h3>
+  <p>You can find additional resources here.</p>
+</div>
+
+
+<button class="tablink" onclick="openProperty('Aboutme', this, 'red')" id="defaultOpen">About Me</button>
+<button class="tablink" onclick="openProperty('Resume', this, 'green')">Resume</button>
+<button class="tablink" onclick="openProperty('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openProperty('Resources', this, 'orange')">Resources</button>
+
+<button><a href="http://127.0.0.1:8000/myapp/mybiography" >Provide Your Information</button>
+
+<script>
+function openProperty(propertyName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(propertyName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+       
+</body>
+</html> 
+

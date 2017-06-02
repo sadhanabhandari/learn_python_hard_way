@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>A list of Data</h1>
+{% for i in data %}
+    <h3>{{ i.firstName}}</h3> {{ i.lastName}} {{ i.email }} {{ i.phone_number }}
+{% endfor %}
+</body>
+</html>
