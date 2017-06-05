@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^myapp/',include("sadhanaApp.urls")),
     url(r'^mybiography/', include("sadhanaApp.urls")),
+    url(r'^datafile/',include("sadhanaApp.urls"))
     #url(r'^myInfo/', include("sadhanaApp.urls"))
 ]
